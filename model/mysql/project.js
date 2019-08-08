@@ -31,11 +31,6 @@ module.exports = function ($, DataTypes) {
     timestamps: false,
     underscored: true,
     tableName: "project",
-    indexes: [
-      {
-        fields: ["created_at"]
-      }
-    ],
     hooks: {
       beforeCreate(project, options) {
         project.id = RandomString.generate({
