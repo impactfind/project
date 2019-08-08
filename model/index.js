@@ -27,20 +27,20 @@ const loadMysqlModel = function(name) {
     return _Mysql_Model_Cache_[name]
 }
 
-const $redis = require("redis").createClient({
-    host: process.env.REDIS_HOST || "127.0.0.1",
-    port: process.env.REDIS_PORT || 6379,
-    no_ready_check: true,
-    password: process.env.REDIS_PASS || undefined
-})
-
-const loadRedisModel = function(name) {
-    return require(`${__dirname}/redis/${name}`)($redis)
-}
+// const $redis = require("redis").createClient({
+//     host: process.env.REDIS_HOST || "127.0.0.1",
+//     port: process.env.REDIS_PORT || 6379,
+//     no_ready_check: true,
+//     password: process.env.REDIS_PASS || undefined
+// })
+//
+// const loadRedisModel = function(name) {
+//     return require(`${__dirname}/redis/${name}`)($redis)
+// }
 
 module.exports = {
     mysql: loadMysqlModel,
-    redis: loadRedisModel
+    // redis: loadRedisModel
 }
 
 
