@@ -1,0 +1,29 @@
+{
+  "name": "address_book",
+  "version": "0.0.1",
+  "description": "address book using qgrail project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "framework"
+  ],
+  "author": "elr0nda",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "async-validator": "^1.11.2",
+    "bluebird": "^3.5.4",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
+    "express": "^4.16.4",
+    "moment": "^2.24.0",
+    "mysql2": "^1.6.5",
+    "qgrail-broker": "0.0.1",
+    "ramda": "^0.26.1",
+    "randomstring": "^1.1.5",
+    "redis": "^2.8.0",
+    "sequelize": "^5.8.6"
+  }
+}
