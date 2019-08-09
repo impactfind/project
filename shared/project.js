@@ -83,7 +83,7 @@ const update = module.exports.update = function ({id, name}) {
   })
 };
 const leave = module.exports.leave = function ({id, userId}) {
-  return ProjectUserModel.findOne({where: {userId, id}})
+  return ProjectUserModel.findOne({where: {userId, projectId: id}})
     .then((result)=> {
       if(result === null) {
         throw new CodeError("Project tidak ditemukan", 404)
